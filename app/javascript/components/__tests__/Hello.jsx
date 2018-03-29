@@ -2,10 +2,11 @@ import React from 'react';
 import { render } from 'enzyme';
 
 import { Hello } from '../Hello';
+import randomWord from 'files/random-word';
 
 // set up props for the component
 const helloProps = {
-  name: 'React'
+  name: randomWord
 };
 
 // create a variable which can be used to render the component for each test
@@ -41,7 +42,7 @@ describe('<Hello />', () => {
     expect(hello.length).toBe(1);
   });
 
-  it('should say "Hello React!"', () => {
-    expect(hello.text()).toEqual('Hello React!');
+  it(`should say "Hello ${randomWord}!"`, () => {
+    expect(hello.text()).toEqual(`Hello ${randomWord}!`);
   });
 });
