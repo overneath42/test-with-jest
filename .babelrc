@@ -3,7 +3,7 @@
     [
       "env",
       {
-        "modules": false,
+        "modules": "umd",
         "targets": {
           "browsers": "> 1%",
           "uglify": true
